@@ -1,0 +1,86 @@
+@import 'packs';
+html * {
+    outline: 1px solid rgba(255, 0, 0, 0.54);
+}
+
+header * {
+    outline: 1px solid rgba(29, 255, 0, 0.54);
+}
+
+
+/*---------------HEADER--------------*/
+
+header {
+    background-color: rgba(0, 0, 0, 0.59);
+    color: #fff;
+    background-image: url(../images/main-banner.jpg);
+    background-size: cover;
+}
+
+//--------Menu
+#logo {
+    text-align: center;
+    img {
+        width: 70%;
+    }
+}
+
+.sections {
+    padding-left: 0;
+    text-align: center;
+    li {
+        display: inline;
+        margin: 0px 15px;
+        a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.80em;
+            display: inline-block;
+            padding-bottom: 3px;
+            &:after {
+                content: '';
+                display: block;
+                margin: auto;
+                height: 3px;
+                width: 0px;
+                background: transparent;
+                transition: width .5s ease, background-color .5s ease;
+            }
+            &:hover:after {
+                width: 100%;
+                background: $verde;
+            }
+        }
+    }
+}
+
+.lenguaje {
+    padding-left: 0;
+    text-align: center;
+    li {
+        display: inline;
+        margin: 0px 10px;
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.75em;
+            transition: .20s;
+            &:hover {
+                color: $verde;
+            }
+        }
+    }
+}
+
+.titulo-main{
+    padding: 100px 0px;
+}
+
+//--------Efectos
+.tachar {
+    color: $verde !important;
+    text-decoration: line-through !important;
+}
+
+

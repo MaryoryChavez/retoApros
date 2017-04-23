@@ -6,6 +6,22 @@
 
 @include foundation-global-styles;
 @include foundation-grid;
+
+
+/*---------------CODE----------------*/
+
+@import 'main';
+@import 'util/mixins';
+
+
+
+/*
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
 // @include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
@@ -49,3 +65,4 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+*/
