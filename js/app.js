@@ -6,8 +6,15 @@ function init() {
     tachadoMenu();
 }
 
+$(window).load(function() {
+    $('.flexslider').flexslider({
+    	touch: true,
+    	pauseOnAction: false,
+    	pauseOnHover: false,
+    });
+  });
+
 function tachadoMenu() {
-    console.log("tachado");
     $('#ingles').click(function () {
         $(this).addClass('tachar');
         $('#español').removeClass('tachar');

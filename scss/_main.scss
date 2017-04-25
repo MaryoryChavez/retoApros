@@ -3,84 +3,66 @@ html * {
     outline: 1px solid rgba(255, 0, 0, 0.54);
 }
 
-header * {
-    outline: 1px solid rgba(29, 255, 0, 0.54);
+h1,h2,h3,h4,h5{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
+@import 'header';
+@import 'flexslider';
 
-/*---------------HEADER--------------*/
+/*---------------- #NOTICIAS --------------*/
 
-header {
-    background-color: rgba(0, 0, 0, 0.59);
-    color: #fff;
-    background-image: url(../images/main-banner.jpg);
-    background-size: cover;
+#noticias{
+        background-color: rgba(0, 0, 0, 0.59);
 }
 
-//--------Menu
-#logo {
-    text-align: center;
-    img {
-        width: 70%;
+#noticias * {
+    outline: 1px solid rgba(10, 255, 0, 0.54);
+}
+
+.imgs-main{
+    position: relative;
+}
+
+#logo-titulo{
+    color: $verde;
+    position: absolute;
+        z-index: 500;
+    left: 50px;
+    top: 60px;
+    h1{
+        margin: 0;
+        font-weight: bold;
+        font-size: 3.6em;
+    }
+    p{
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.2em;
     }
 }
 
-.sections {
-    padding-left: 0;
-    text-align: center;
-    li {
-        display: inline;
-        margin: 0px 15px;
-        a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.80em;
-            display: inline-block;
-            padding-bottom: 3px;
-            &:after {
-                content: '';
-                display: block;
-                margin: auto;
-                height: 3px;
-                width: 0px;
-                background: transparent;
-                transition: width .5s ease, background-color .5s ease;
-            }
-            &:hover:after {
-                width: 100%;
-                background: $verde;
-            }
-        }
+#imagen-main{
+    width: 70%;
+    position: absolute;
+    bottom: 30px;
+    z-index: 100;
+}
+
+#video-main{
+    width: 40%;
+    position: relative;
+    z-index: 200;
+    left: 100%;
+    transform: translateX(-100%);
+    margin-top: 50px;
+}
+
+#texto-informativo{
+    margin-top: 20px;
+    p{
+        margin: 20px 0px;
+        color: #393939;
     }
 }
-
-.lenguaje {
-    padding-left: 0;
-    text-align: center;
-    li {
-        display: inline;
-        margin: 0px 10px;
-        a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.75em;
-            transition: .20s;
-            &:hover {
-                color: $verde;
-            }
-        }
-    }
-}
-
-.titulo-main{
-    padding: 100px 0px;
-}
-
-//--------Efectos
-.tachar {
-    color: $verde !important;
-    text-decoration: line-through !important;
-}
-
-
