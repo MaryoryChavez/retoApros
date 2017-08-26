@@ -1,0 +1,141 @@
+#nosotros {
+    button {
+        cursor: pointer;
+        padding: 0;
+    }
+    padding-bottom: 50px;
+}
+
+#multimedia_presentacion {
+    height: 18em !important;
+    position: relative;
+    #img_nosotros {
+        width: 500px;
+        position: absolute;
+        transform: translateY(-25%);
+        z-index: 10;
+    }
+    #video_open {
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        transform: translateY(50%);
+        right: 0;
+        z-index: 50;
+        width: 250px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#nosotros {
+    .orbit {
+        border-radius: 10px;
+        margin: 30px 10px;
+        background-color: $verde;
+        padding-top: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 40px;
+    }
+    .orbit-slide {
+        padding: 0px 30px;
+        padding-bottom: 20px;
+        color: #fff;
+        h3,
+        h6 {
+            font-weight: 200;
+        }
+        h3 {
+            padding-bottom: 20px;
+        }
+        h6 {
+            font-size: 0.8em;
+        }
+        h4 {
+            font-weight: 500;
+            font-size: 1.3em;
+        }
+        a {
+            color: #fff;
+            font-weight: 500;
+        }
+        p {
+            font-size: 0.8em;
+        }
+    }
+    .orbit-bullets {
+        padding-left: 30px;
+        text-align: left;
+        button {
+            width: 1em;
+            height: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 39.9375em) {
+    #multimedia_presentacion {
+        #img_nosotros {
+            left: 50%;
+            transform: translate(-50%, -25%);
+        }
+        #video_open {
+            left: 50%;
+            transform: translate(-50%, 50%)
+        }
+    }
+    #video_nosotros{
+        iframe{
+            width: 100% !important;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 0px 10px;
+        }
+        .close-button{
+            span{
+                font-size: 2em;
+            }
+        }
+    }
+    #nosotros{
+        .orbit{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .orbit-slide{
+            text-align: center;
+            h3{
+                font-size: 2.4em;
+            }
+            h4{
+                font-size: 1.4em;
+            }
+            h6{
+                font-size: 1.1em;
+            }
+            p{
+                font-size: 1.1em;
+                padding-top: 20px;
+            }
+        }
+        .orbit-container{
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    #multimedia_presentacion{
+        #img_nosotros{
+            left: 10%;
+        }
+        #video_open{
+            right: 10%;
+        }
+    }
+}
+

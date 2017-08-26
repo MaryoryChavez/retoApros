@@ -1,0 +1,232 @@
+#footer {
+    background-image: url(../images/backgrund-footer.jpg);
+    background-position: top;
+    background-size: cover;
+    padding-top: 60px;
+}
+
+.contacto {
+    background-color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 1px 1px 10px 1px $gris-oscuro;
+}
+
+#contacto {
+    padding: 40px 0px;
+    .lista_contacto {
+        list-style: none;
+        h3 {
+            font-weight: 300;
+            font-size: 1.6em;
+            text-transform: uppercase;
+            color: $gris-oscuro;
+        }
+        &>li {
+            color: $gris-oscuro;
+            margin: 25px 0px;
+            position: relative;
+            font-size: 0.8em;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                margin-bottom: -12px;
+                width: 90px;
+                height: 1px;
+                background-color: $gris-claro;
+            }
+        }
+    }
+    .datos_contacto {
+        list-style: none;
+        margin-left: 0px;
+        padding-left: 0px;
+        &>li {
+            margin: 10px 0px;
+            line-height: 10px;
+            b {
+                font-weight: 500;
+            }
+            a {
+                color: $gris-oscuro;
+                font-weight: 300;
+                i {
+                    padding-left: 7px;
+                }
+            }
+        }
+    }
+}
+
+#formulario {
+    padding: 0px 50px;
+//    background-color: red;
+        input,
+    textarea {
+        background: none;
+        box-shadow: none;
+        border: solid 1px $verde-claro;
+        color: #fff;
+        margin: 0px;
+        position: relative;
+        z-index: 10;
+        font-weight: 300;
+        &:focus,
+        &:active {
+            outline: none;
+            box-shadow: none;
+        }
+        &[type="text"],
+        &[type="email"],
+        &[type="tel"] {
+            border: none;
+            border-bottom: 1px solid #fff;
+            transition: color 0.15s ease-out 0s;
+            &:focus {
+                border-bottom: 1px solid $verde-claro;
+            }
+            &:focus + label{
+                top: -10px;
+                font-size: 0.8em;
+                color: $verde-claro;
+            }
+        }
+        &[type="submit"] {
+            background-color: $verde-claro;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+    }
+    form>.row {
+        position: relative;
+        margin: 30px 0px;
+    }
+    
+    label {
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        transform: translateY(-50%);
+        color: #fff;
+        font-weight: 200;
+        font-size: 1em;
+        transition: all 0.15s ease-out 0s;
+        z-index: 1;
+    }
+    
+    #checkbox1{
+        & + label{
+        font-size: 12px;
+            padding-left: 10px;
+    }
+    }
+}
+
+.ubicacion {
+    padding-right: 0px;
+    position: relative;
+    z-index: 10;
+}
+
+#map {
+    height: 415px;
+//    border-radius: 10px;
+    border-top-left-radius: 5px;
+}
+
+#cajaDireccion {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    color: #000; 
+    border-bottom-left-radius: 5px;
+    position: relative;
+    #direccion{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 300;
+        font-size: 15px;
+        img{
+            padding: 0px 10px;
+        }
+    }
+}
+
+#redes{
+    list-style: none;
+    padding: 150px 0px 50px;
+    li{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    & + p{
+        color: #fff;
+        font-size: 13px;
+        padding-left: 30px;
+        padding-bottom: 20px; 
+    }
+}
+
+#icon-footer{
+    position: absolute;
+    right: 0;
+    transform: translateY(-100%);
+    z-index: 0;
+}
+
+
+@media screen and (max-width: 39.9375em) {
+    .contacto{
+        border-radius: 5px;
+    }
+    #contacto{
+        text-align: center;
+        .lista_contacto{
+            margin-left: 0px;
+            &>li::after{
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    #formulario{
+        padding: 50px 50px;
+        & .row:last-child{
+            text-align: center;
+        }
+    }
+    .ubicacion{
+        padding: 0px;
+        padding-bottom: 50px;
+    }
+    #redes{
+        padding: 0px;
+        text-align: center;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .formulario{
+        position: absolute;
+        right: 0px;
+    }
+    .ubicacion{
+        padding-top: 50px;
+    }
+}
+@media screen and (min-width: 64em) {
+    .contacto{
+    }
+    .formulario{
+        position: absolute;
+        right: (100%/3);
+    }
+    .ubicacion{
+        position: absolute;
+        right: 0;
+    }
+}
